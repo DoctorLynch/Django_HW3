@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -75,14 +77,14 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Django_HW3',  # Название БД
-        'USER': 'postgres',  # Пользователь для подключения
-        'PASSWORD': '02011999',  # Пароль для этого пользователя
-        'HOST': '127.0.0.1',  # Адрес, на котором развернут сервер БД
-        'PORT': 5432,  # Порт, на котором работает сервер БД
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Django_HW3',
+        'USER': 'postgres',
+        'PASSWORD': '02011999'
     }
 }
+
+
 
 
 # Password validation
@@ -107,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
