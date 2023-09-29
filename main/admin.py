@@ -5,12 +5,11 @@ from main.models import Category, Product
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description')
-    search_fields = ('name', 'description')
+    list_display = ('id', 'name')
 
 
 @admin.register(Product)
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'image_preview', 'category', 'purchase_price', 'date_creation',
-                    'date_last_mod')
-
+    list_display = ('id', 'name', 'category', 'purchase_price',)
+    list_filter = ('category',)
+    search_fields = ('name', 'description')
